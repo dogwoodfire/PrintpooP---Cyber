@@ -1,3 +1,4 @@
+![Pixly] (https://makerworld.bblmw.com/makerworld/model/US2dd93ca78407a5/design/2025-05-19_1b371e341ae8d.gif?x-oss-process=image/resize,w_1000/format,webp)
 Pixly is a compact, ESP32-powered accessory designed specifically for the Bambu Lab A1, A1 Mini 3D printer. It replaces the original hotend faceplate with a custom 3D-printed enclosure (the "Box") that houses a vibrant 2.4" touchscreen display.
 
 📡 Live Status Display
