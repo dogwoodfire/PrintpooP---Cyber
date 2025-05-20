@@ -15,3 +15,5 @@ Pixly is open to customisation. Designed by a maker, for makers—it’s fully p
 
 🛠️ Easy Mounting
 The enclosure is engineered to directly replace the Bambu Lab A1's default hotend faceplate, securing Pixly in a clean, integrated form factor.
+
+[MakerWorld] https://makerworld.com/en/models/1432974-pixly-faceplate-kit#profileId-1490390
