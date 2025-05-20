@@ -19,13 +19,12 @@ The enclosure is engineered to replace the Bambu Lab A1's default hotend facepla
 
 ---------------------------------------------------------------------------------------------------
 
-![3dPrint part at MakerWorld](https://makerworld.com/en/models/1432974-pixly-faceplate-kit#profileId-1490390)
+## Part list:
 
-Part list:
-![ESP32 2.4-inch 240 * 320 Capacitive Touch Display](s.click.aliexpress.com/e/_omgP1zh)
+- ![3dPrint part at MakerWorld](https://makerworld.com/en/models/1432974-pixly-faceplate-kit#profileId-1490390)
+- ![ESP32 2.4-inch 240 * 320 Capacitive Touch Display](s.click.aliexpress.com/e/_omgP1zh)
+- ![1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
 
-![1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
-
-![Flash firmware](https://github.com/VaAndCob/Pixly)
-
-Important Notice: The 3D hardware component is finalised; however, the firmware remains in active development and may be subject to updates.
+## Important Notice:
+The 3D hardware component is finalised; however, the firmware remains in active development and may be subject to updates.
+- ![Flash firmware](https://github.com/VaAndCob/Pixly)
