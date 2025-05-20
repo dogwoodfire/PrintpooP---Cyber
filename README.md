@@ -1,4 +1,5 @@
 ![Pixly](/picture/animation.gif)
+
 Pixly is a compact, ESP32-powered accessory designed specifically for the Bambu Lab A1, A1 Mini 3D printer. It replaces the original hotend faceplate with a custom 3D-printed enclosure (the "Box") that houses a vibrant 2.4" touchscreen display.
 
 📡 Live Status Display
@@ -18,15 +19,13 @@ The enclosure is engineered to replace the Bambu Lab A1's default hotend facepla
 
 ---------------------------------------------------------------------------------------------------
 
-[Grab 3dPrint part at MakerWorld](https://makerworld.com/en/models/1432974-pixly-faceplate-kit#profileId-1490390)
+![3dPrint part at MakerWorld](https://makerworld.com/en/models/1432974-pixly-faceplate-kit#profileId-1490390)
 
 Part list:
-1. ESP32 2.4-inch 240 * 320 Capacitive Touch Display Type C WiFi BT Development Board Smart Display
-s.click.aliexpress.com/e/_omgP1zh
+![ESP32 2.4-inch 240 * 320 Capacitive Touch Display](s.click.aliexpress.com/e/_omgP1zh)
 
-2. Notebook Speaker Computer Horn 1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM
-s.click.aliexpress.com/e/_oDSKVf9
+![1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
 
-[Flash firmware](https://github.com/VaAndCob/Pixly)
+![Flash firmware](https://github.com/VaAndCob/Pixly)
 
 Important Notice: The 3D hardware component is finalised; however, the firmware remains in active development and may be subject to updates.
