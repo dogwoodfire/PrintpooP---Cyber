@@ -18,4 +18,5 @@ The enclosure is engineered to replace the Bambu Lab A1's default hotend facepla
 ---------------------------------------------------------------------------------------------------
 
 [MakerWorld] https://makerworld.com/en/models/1432974-pixly-faceplate-kit#profileId-1490390
+
 Important Notice: The 3D hardware component is finalised; however, the firmware remains in active development and may be subject to updates.
