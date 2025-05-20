@@ -27,7 +27,7 @@ The enclosure is engineered to replace the Bambu Lab A1's default hotend facepla
 
 ## Important Notice:
 The 3D hardware component is finalised; however, the firmware remains in active development and may be subject to updates.
-- [Flash firmware](https://github.com/VaAndCob/Pixly)
+- [Flash Firmware](https://vaandcob.github.io/Pixly/firmware/pixlyflasher.html)
 - Develop progress [ 25% ] - NOT PUBLISH YET 
 
 
