@@ -2,10 +2,12 @@
 
 [Youtube](https://youtube.com/shorts/96pzUit0e2s)
 
+## Pixly – Retro Pixel Smart Display for Bambu Lab A1
+
 Pixly is a compact, ESP32-powered accessory designed specifically for the Bambu Lab A1, A1 Mini 3D printer. It replaces the original hotend faceplate with a custom 3D-printed enclosure (the "Box") that houses a vibrant 2.4" touchscreen display.
 
 📡 Live Status Display
-Pixly connects to your A1 via Wi-Fi and presents real-time print data—such as print progress, temperatures, and fan speeds—right at the print head. This localised status view makes monitoring more intuitive and visually engaging.
+Pixly connects to your A1 via Wi-Fi and presents real-time print data —such as print progress, temperatures, fan speeds, and Clock —right at the print head. This localised status view makes monitoring more intuitive and visually engaging.
 
 🎮 8-Bit Aesthetic
 All visuals are styled in charming 8-bit pixel art, giving your printer a retro personality. Animations and icons are custom-designed to blend nostalgic design with functional UX.
@@ -13,11 +15,23 @@ All visuals are styled in charming 8-bit pixel art, giving your printer a retro 
 🧠 Powered by ESP32
 At its core is a single integrated module combining the ESP32 SoC with the 2.4" TFT, delivering reliable connectivity and rendering performance without external components.
 
-🔧 Modular and Maker-Friendly
-Pixly is open to customisation. Designed by a maker, for makers—it’s fully programmable, allowing users to expand its features or adapt it for different printer models.
-
 🛠️ Easy Mounting
 The enclosure is engineered to replace the Bambu Lab A1's default hotend faceplate, securing Pixly in a clean, integrated form factor.
+
+
+
+HOW TO USE: 
+1. Follow the screen instructions. (Click the SETUP button on the screen to enter network configuration)
+2. Enter the setup web portal by connecting to SSID Pixly Setup via smartphone or laptop
+3. Enter the printer IP address, access code, serial number and timezone on the SETUP page.
+    How to get printer serial number :  https://wiki.bambulab.com/en/general/find-sn
+    How to get printer IP address & Access Code :  https://wiki.bambulab.com/en/software/bambu-studio/failed-to-send-print-files
+4. Configure WiFi credentials in the Configure WiFi page
+5. Currently, there are 2 status display pages; change the display page by swiping left and right.
+
+Important Notice: 
+The 3D hardware component is finalised; however, the firmware remains in active development and may be subject to updates.
+Develop progress [ 25% ] - NOT PUBLISH YET
 
 ---------------------------------------------------------------------------------------------------
 
