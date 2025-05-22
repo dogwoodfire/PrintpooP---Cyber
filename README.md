@@ -33,4 +33,4 @@ The 3D hardware component is finalised; however, the firmware remains in active 
 - Develop progress [ 25% ] - NOT PUBLISH YET 
 
 
-## [☕ Buy me coffee](buymeacoffee.com/vaandcob)
+## [☕ Buy me coffee](https://buymeacoffee.com/vaandcob)
