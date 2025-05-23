@@ -38,7 +38,9 @@ HOW TO USE: 
 - [1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
 
 ## Important Notice:
-The 3D hardware component is finalised; however, the firmware remains in active development and may be subject to updates.
+Heads up! This firmware is still a work in progress — about 25% done.
+It's not officially released yet, so things might break or not work as expected.
+We’re working hard to get it ready — thanks for your understanding!
 - [Flash Firmware](https://vaandcob.github.io/webpage/src/index.html)
 - Develop progress [ 25% ] - NOT PUBLISH YET 
 
