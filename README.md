@@ -29,10 +29,6 @@ HOW TO USE: 
 4. Configure WiFi credentials in the Configure WiFi page
 5. Currently, there are 2 status display pages; change the display page by swiping left and right.
 
-Important Notice: 
-The 3D hardware component is finalised; however, the firmware remains in active development and may be subject to updates.
-Develop progress [ 25% ] - NOT PUBLISH YET
-
 ---------------------------------------------------------------------------------------------------
 
 ## Part list:
