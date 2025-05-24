@@ -1,6 +1,6 @@
-![Pixly](/picture/animation.gif)
-
 [Youtube](https://youtube.com/shorts/96pzUit0e2s)
+
+![Pixly](/picture/animation.gif)
 
 ## Pixly – Retro Pixel Smart Display for Bambu Lab A1
 
