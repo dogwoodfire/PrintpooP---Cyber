@@ -29,6 +29,9 @@ HOW TO USE: 
     How to get printer IP address & Access Code :  https://wiki.bambulab.com/en/software/bambu-studio/failed-to-send-print-files
 5. Currently, there are 2 status display pages; change the display page by swiping left and right.
 
+![Screen](/picture/screen1.jpg)
+![Network Setup](/picture/screen1.jpg)
+
 ---------------------------------------------------------------------------------------------------
 
 ## Part list:
