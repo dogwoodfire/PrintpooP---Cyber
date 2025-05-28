@@ -25,12 +25,18 @@ HOW TO USE: 
 2. Enter the setup web portal by connecting to SSID Pixly Setup via smartphone or laptop
 3. Configure WiFi credentials in the Configure WiFi page.
 4. Enter the printer IP address, access code, serial number and timezone on the SETUP page.
+   
     How to get printer serial number :  https://wiki.bambulab.com/en/general/find-sn
+   
     How to get printer IP address & Access Code :  https://wiki.bambulab.com/en/software/bambu-studio/failed-to-send-print-files
-5. Currently, there are 3 status display pages
+6. Currently, there are 3 status display pages
+   
     Page 1 - Temperature / Fan
+   
     Page 2 - Print progress
+   
     Page 3 - AMS filament type and colour
+   
    *change the display page by swiping left or right.
 
 ![Screen](/picture/screen1.jpg)
