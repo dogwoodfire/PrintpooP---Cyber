@@ -22,8 +22,8 @@ The enclosure is engineered to replace the Bambu Lab A1's default hotend facepla
 
 HOW TO USE: 
 1. Follow the screen instructions. (Click the SETUP button on the screen to enter network configuration)
-2. Enter the setup web portal by connecting to SSID PrintpooP Setup via smartphone or laptop
-3. Configure WiFi credentials in the Configure WiFi page.
+2. Access the setup web portal by connecting to the SSID Pixly Setup using a smartphone or laptop.
+3. Configure Wi-Fi credentials on the Configure Wi-Fi page.
 4. Enter the printer IP address, access code, serial number and timezone on the SETUP page.
    
     How to get printer serial number :  https://wiki.bambulab.com/en/general/find-sn
@@ -36,8 +36,6 @@ HOW TO USE: 
     Page 2 - Print progress
    
     Page 3 - AMS filament type and colour
-   
-   *change the display page by swiping left or right.
 
 ![Screen](/picture/screen1.jpg)
 ![Network Setup](/picture/screen2.jpg)
