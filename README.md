@@ -4,10 +4,10 @@
 
 ## PrintpooP – Retro Pixel Smart Display for Bambu Lab A1
 
-PrintpooP is a compact, ESP32-powered accessory designed specifically for the Bambu Lab A1, A1 Mini 3D printer. It replaces the original hotend faceplate with a custom 3D-printed enclosure (the "Box") that houses a vibrant 2.4" touchscreen display.
+A compact, ESP32-powered accessory designed specifically for the Bambu Lab A1, A1 Mini 3D printer. It replaces the original hotend faceplate with a custom 3D-printed enclosure (the "Box") that houses a vibrant 2.4" touchscreen display.
 
 📡 Live Status Display
-PrintpooP connects to your A1 via Wi-Fi and presents real-time print data —such as print progress, temperatures, fan speeds, and Clock —right at the print head. This localised status view makes monitoring more intuitive and visually engaging.
+PrintpooP connects to your A1 via Wi-Fi and presents real-time print data, such as print progress, temperatures, fan speeds, and Clock. Right at the print head. This localised status view makes monitoring more intuitive and visually engaging.
 
 🎮 8-Bit Aesthetic
 All visuals are styled in charming 8-bit pixel art, giving your printer a retro personality. Animations and icons are custom-designed to blend nostalgic design with functional UX.
@@ -26,9 +26,9 @@ HOW TO USE: 
 3. Configure Wi-Fi credentials on the Configure Wi-Fi page.
 4. Enter the printer IP address, access code, serial number and timezone on the SETUP page.
    
-    How to get printer serial number :  https://wiki.bambulab.com/en/general/find-sn
+    How to get printer serial number:  https://wiki.bambulab.com/en/general/find-sn
    
-    How to get printer IP address & Access Code :  https://wiki.bambulab.com/en/software/bambu-studio/failed-to-send-print-files
+    How to get printer IP address & Access Code:  https://wiki.bambulab.com/en/software/bambu-studio/failed-to-send-print-files
 6. Currently, there are 3 status display pages
    
     Page 1 - Temperature / Fan
