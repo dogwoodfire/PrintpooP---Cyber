@@ -4,6 +4,8 @@
 
 ## PrintpooP – Retro Pixel Smart Display for Bambu Lab A1
 
+Introduction   This doesn’t make my prints any better… but it does make my printer look way cooler 😂
+
 A compact, ESP32-powered accessory designed specifically for the Bambu Lab A1, A1 Mini 3D printer. It replaces the original hotend faceplate with a custom 3D-printed enclosure (the "Box") that houses a vibrant 2.4" touchscreen display.
 
 📡 Live Status Display
