@@ -24,7 +24,7 @@ The enclosure is engineered to replace the Bambu Lab A1's default hotend facepla
 
 HOW TO USE: 
 1. Follow the screen instructions. (Click the SETUP button on the screen to enter network configuration)
-2. Access the setup web portal by connecting to the SSID Pixly Setup using a smartphone or laptop.
+2. Access the setup web portal by connecting to the SSID PirntpooP_Setup using a smartphone or laptop.
 3. Configure Wi-Fi credentials on the Configure Wi-Fi page.
 4. Enter the printer IP address, access code, serial number and timezone on the SETUP page.
    
