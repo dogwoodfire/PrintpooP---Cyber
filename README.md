@@ -46,7 +46,7 @@ HOW TO USE: 
 
 ## Part list:
 
-- [3dPrint part at MakerWorld](https://makerworld.com/en/models/1432974-PrintpooP-faceplate-kit#profileId-1490390)
+- [3D Print part at MakerWorld](https://makerworld.com/en/models/1432974-PrintpooP-faceplate-kit#profileId-1490390)
 - [ESP32 2.4-inch 240 * 320 Capacitive Touch Display](s.click.aliexpress.com/e/_omgP1zh)
 - [1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
 
@@ -55,7 +55,7 @@ Heads up! This firmware is still a work in progress — about 25% done.
 It's not officially released yet, so things might break or not work as expected.
 We’re working hard to get it ready — thanks for your understanding!
 - [Flash Firmware](https://vaandcob.github.io/webpage/src/index.html)
-- Develop progress [ 25% ] - NOT PUBLISH YET 
+- Develop progress [ 25% ] - Source code NOT PUBLISHED YET 
 
 
 ## [☕ Buy me coffee](https://buymeacoffee.com/vaandcob)
