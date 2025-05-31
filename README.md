@@ -1,4 +1,4 @@
-[Youtube](https://youtube.com/shorts/96pzUit0e2s)
+[Youtube](https://youtu.be/cmsc_lcnK_s)
 
 ![PrintpooP](/picture/animation.gif)
 
