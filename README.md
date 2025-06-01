@@ -1,3 +1,14 @@
+## WORK BOTH 2.4" and 2.8" Resistive Touch Screen
+## Source code uploaded
+## Firmware version: 1.3.0 (display on the top left-most on the welcome screen)
+Important Notice:
+
+Heads up! This firmware is still a work in progress
+It's not officially released yet, so things might break or not work as expected.
+We’re working hard to get it ready — thanks for your understanding!
+- [Flash Firmware Online for 2.4" and 2.8"](https://vaandcob.github.io/webpage/src/index.html)
+- Develop progress [ 25% ]
+  
 [Youtube](https://youtu.be/cmsc_lcnK_s)
 
 ![PrintpooP](/picture/animation.gif)
@@ -21,12 +32,12 @@ At its core is a single integrated module combining the ESP32 SoC with the 2.4" 
 The enclosure is engineered to replace the Bambu Lab A1's default hotend faceplate, securing PrintpooP in a clean, integrated form factor.
 
 
-
 HOW TO USE: 
-1. Follow the screen instructions. (Click the SETUP button on the screen to enter network configuration)
-2. Access the setup web portal by connecting to the SSID PirntpooP_Setup using a smartphone or laptop.
-3. Configure Wi-Fi credentials on the Configure Wi-Fi page.
-4. Enter the printer IP address, access code, serial number and timezone on the SETUP page.
+1. Touch screen calibration will be shown at the first run, but can be manually entered by pressing the RESET button and then pressing BOOT (GPIO_0) button within a second and hold
+2. Follow the screen instructions. (Click the SETUP button on the screen to enter network configuration)
+3. Access the setup web portal by connecting to the SSID PirntpooP_Setup using a smartphone or laptop.
+4. Configure Wi-Fi credentials on the Configure Wi-Fi page.
+5. Enter the printer's IP address, access code, serial number, and time zone on the SETUP page.
    
     How to get printer serial number:  https://wiki.bambulab.com/en/general/find-sn
    
@@ -49,15 +60,5 @@ HOW TO USE: 
 - [3D Print part at MakerWorld](https://makerworld.com/en/models/1432974-PrintpooP-faceplate-kit#profileId-1490390)
 - [ESP32 2.4" 240 x 320 Resistive Touch Display](s.click.aliexpress.com/e/_omgP1zh)
 - [1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
-
-## Firmware build: 1.2.0 (display on the top left most on the welcome screen)
-Important Notice:
-
-Heads up! This firmware is still a work in progress — about 25% done.
-It's not officially released yet, so things might break or not work as expected.
-We’re working hard to get it ready — thanks for your understanding!
-- [Flash Firmware Online](https://vaandcob.github.io/webpage/src/index.html)
-- Develop progress [ 25% ] - Source code NOT PUBLISHED YET
-
 
 ## [☕ Buy me coffee](https://buymeacoffee.com/vaandcob)
