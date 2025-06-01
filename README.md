@@ -2,6 +2,7 @@
 ## WORK BOTH 2.4" and 2.8" Resistive Touch Screen
 ## Source code -> coming soon!
 ## Firmware version: 1.3.0 (display on the top left-most on the welcome screen)
+
 Important Notice:
 
 Heads up! This firmware is still a work in progress
@@ -9,7 +10,7 @@ It's not officially released yet, so things might break or not work as expected.
 We’re working hard to get it ready — thanks for your understanding!
 - [Flash Firmware Online for 2.4" and 2.8"](https://vaandcob.github.io/webpage/src/index.html)
 - Develop progress [ 25% ]
-  
+--------------------------  
 [Watch on Youtube](https://youtu.be/cmsc_lcnK_s)
 
 ![PrintpooP](/picture/animation.gif)
@@ -60,4 +61,6 @@ HOW TO USE: 
 - [ESP32 2.4" 240 x 320 Resistive Touch Display](s.click.aliexpress.com/e/_omgP1zh)
 - [1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
 
-## [☕ Buy me coffee](https://buymeacoffee.com/vaandcob)
+
+[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=vaandcob&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/vaandcob)
+
