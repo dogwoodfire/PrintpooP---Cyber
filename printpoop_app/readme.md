@@ -19,7 +19,7 @@ Update the TFT_eSPI library.
  
 * Please backup an old "User_Setup_Select.h" file
   
-2. Copy "User_Setups/Setup_CYD_2_4.h" and "User_Setups/Setup_CYD_2_8.h" into folder "User_Setups"
+2. Copy "User_Setups/Setup_CYD_2_4.h" and "User_Setups/Setup_CYD_2_8.h" into folder "TFT_eSPI/User_Setups"
 ------------
 To select the board type to compile
 
