@@ -10,7 +10,7 @@ We’re working hard to get it ready — thanks for your understanding!
 - [Flash Firmware Online for 2.4" and 2.8"](https://vaandcob.github.io/webpage/src/index.html)
 - Develop progress [ 25% ]
   
-[Youtube](https://youtu.be/cmsc_lcnK_s)
+[Watch on Youtube](https://youtu.be/cmsc_lcnK_s)
 
 ![PrintpooP](/picture/animation.gif)
 
