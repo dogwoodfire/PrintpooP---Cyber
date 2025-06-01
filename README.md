@@ -1,3 +1,4 @@
+# PrintpooP – Retro Pixel Smart Display for Bambu Lab A1
 ## WORK BOTH 2.4" and 2.8" Resistive Touch Screen
 ## Source code -> coming soon!
 ## Firmware version: 1.3.0 (display on the top left-most on the welcome screen)
@@ -12,8 +13,6 @@ We’re working hard to get it ready — thanks for your understanding!
 [Youtube](https://youtu.be/cmsc_lcnK_s)
 
 ![PrintpooP](/picture/animation.gif)
-
-## PrintpooP – Retro Pixel Smart Display for Bambu Lab A1
 
 Introduction   This doesn’t make my prints any better… but it does make my printer look way cooler 😂
 
