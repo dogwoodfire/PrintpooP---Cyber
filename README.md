@@ -1,5 +1,5 @@
 ## WORK BOTH 2.4" and 2.8" Resistive Touch Screen
-## Source code uploaded
+## Source code -> coming soon!
 ## Firmware version: 1.3.0 (display on the top left-most on the welcome screen)
 Important Notice:
 
