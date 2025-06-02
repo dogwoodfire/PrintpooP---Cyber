@@ -31,7 +31,7 @@ Edit "User_Setup_Select.h"
 
 //#include <User_Setups/Setup_CYD_2_8.h>
 
-in the IDE line no. 25 -> #define USE_TFT_28
+in the file "printpoop_app.ino" line no. 25 -> //#define USE_TFT_28
 
 ## 2.8" screen
 
@@ -41,6 +41,8 @@ Edit "User_Setup_Select.h"
 
 #include <User_Setups/Setup_CYD_2_8.h>
 
-in the IDE line no. 25 -> #define USE_TFT_28
+in the file "printpoop_app.ino" line no. 25 -> #define USE_TFT_28
 
 ------------
+
+
