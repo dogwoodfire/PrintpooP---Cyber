@@ -6,7 +6,7 @@ Requirement:
  * IDE: Arduino IDE 2.3.6
  * ESP32 Core: 2.0.7
  * Board: ESP32 Dev Module
- * Partition scheme: Huge App 3MB/SPIFF 1MB
+ * Partition scheme: Max App Only (3.9MB)
    
 
 Library:
