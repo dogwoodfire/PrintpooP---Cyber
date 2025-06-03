@@ -1,48 +1,89 @@
-# Instructions on  how to compile the source code.
+# Compiling the Source Code for PrintPooP Project
 
-Requirement:
+This guide provides instructions on how to set up your environment and compile the source code for the PrintPooP project.
 
- * Hardware: CYD 2.4" ESP32 Dev Board
- * IDE: Arduino IDE 2.3.6
- * ESP32 Core: 2.0.7
- * Board: ESP32 Dev Module
- * Partition scheme: Max App Only (3.9MB)
-   
+## 1. Prerequisites & Setup
 
-Library:
-- TFT_eSPI / lvgl / etc.. as needed by the sketch
+Ensure your environment matches the following requirements:
 
-------------
-Update the TFT_eSPI library.
+* **Hardware:** CYD 2.4" ESP32 Dev Board (or compatible 2.8" version, see specific setup below)
+* **IDE:** Arduino IDE 2.3.6 (or compatible)
+* **ESP32 Core:** Version 2.0.7 (or compatible)
+* **Board Selection in IDE:** "ESP32 Dev Module"
+* **Partition Scheme:** "Max App Only (3.9MB App)"
+    * **Action:** You must add this custom partition scheme to your Arduino IDE *before* compiling. Instructions for this are located in the `partitions` folder of this project.
 
-1. Copy "User_Setup_Select.h" into the sketch folder "c:/arduino/Sketch/libraries/TFT_eSPI"
- 
-* Please backup an old "User_Setup_Select.h" file
-  
-2. Copy "User_Setups/Setup_CYD_2_4.h" and "User_Setups/Setup_CYD_2_8.h" into folder "TFT_eSPI/User_Setups"
-------------
-To select the board type to compile
+* **Required Libraries:**
+    * `TFT_eSPI`
+    * `lvgl`
+    * *(And any other libraries specified as needed by the sketch)*
+    * **Action:** Ensure all necessary libraries are installed in your Arduino IDE.
 
-## 2.4" screen 
+---
 
-Edit "User_Setup_Select.h"
+## 2. Configure the `TFT_eSPI` Library
 
-#include <User_Setups/Setup_CYD_2_4.h>
+These steps configure the `TFT_eSPI` library specifically for the CYD display.
 
-//#include <User_Setups/Setup_CYD_2_8.h>
+**A. Backup Existing `User_Setup_Select.h` (Important!)**
 
-in the file "printpoop_app.ino" line no. 25 -> //#define USE_TFT_28
+   Before proceeding, it's highly recommended to back up your current `User_Setup_Select.h` file if you use `TFT_eSPI` for other projects.
+   * Locate the file, typically at: `C:\Users\{YourUsername}\Documents\Arduino\libraries\TFT_eSPI\User_Setup_Select.h` (Windows) or `~/Documents/Arduino/libraries/TFT_eSPI/User_Setup_Select.h` (macOS/Linux). The exact path might vary based on your sketchbook location.
 
-## 2.8" screen
+**B. Copy Provided `TFT_eSPI` Configuration Files:**
 
-Edit "User_Setup_Select.h"
+1.  **Copy `User_Setup_Select.h`:**
+    * Copy the `User_Setup_Select.h` file provided with *this project* into your `TFT_eSPI` library folder, overwriting the existing one.
+    * Example path: `C:\Users\{YourUsername}\Documents\Arduino\libraries\TFT_eSPI\`
 
-//#include <User_Setups/Setup_CYD_2_4.h>
+2.  **Copy `User_Setups` Files:**
+    * Copy the `Setup_CYD_2_4.h` and `Setup_CYD_2_8.h` files (provided with *this project* in a `User_Setups` folder or similar) into the `User_Setups` subfolder within your `TFT_eSPI` library.
+    * Example path: `C:\Users\{YourUsername}\Documents\Arduino\libraries\TFT_eSPI\User_Setups\`
 
-#include <User_Setups/Setup_CYD_2_8.h>
+---
 
-in the file "printpoop_app.ino" line no. 25 -> #define USE_TFT_28
+## 3. Select Target Screen Size for Compilation
 
-------------
+You need to configure the project for either a 2.4" or 2.8" screen by editing two files: `User_Setup_Select.h` (within the `TFT_eSPI` library folder) and `printpoop_app.ino` (your main sketch file).
 
+### For a 2.4" Screen
 
+1.  **Edit `User_Setup_Select.h`** (in your `TFT_eSPI` library folder):
+    * Ensure the following lines are set:
+        ```cpp
+        #include <User_Setups/Setup_CYD_2_4.h> // Active
+        //#include <User_Setups/Setup_CYD_2_8.h> // Commented out
+        ```
+
+2.  **Edit `printpoop_app.ino`** (your main sketch file):
+    * Go to approximately line 25 and make sure the `USE_TFT_28` macro is commented out:
+        ```cpp
+        // #define USE_TFT_28 // Should be commented out for 2.4" screen
+        ```
+
+### For a 2.8" Screen
+
+1.  **Edit `User_Setup_Select.h`** (in your `TFT_eSPI` library folder):
+    * Ensure the following lines are set:
+        ```cpp
+        //#include <User_Setups/Setup_CYD_2_4.h> // Commented out
+        #include <User_Setups/Setup_CYD_2_8.h> // Active
+        ```
+
+2.  **Edit `printpoop_app.ino`** (your main sketch file):
+    * Go to approximately line 25 and make sure the `USE_TFT_28` macro is defined (uncommented):
+        ```cpp
+        #define USE_TFT_28 // Should be active for 2.8" screen
+        ```
+
+---
+
+## 4. Compile and Upload
+
+After completing the above steps:
+
+1.  Open the `printpoop_app.ino` sketch in your Arduino IDE.
+2.  Ensure the correct Board ("ESP32 Dev Module") and Partition Scheme ("Max App Only (3.9MB App)") are selected under the `Tools` menu.
+3.  Compile and upload the sketch to your ESP32 CYD board.
+
+---
