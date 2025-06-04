@@ -11,7 +11,8 @@ Ensure your environment matches the following requirements:
 * **ESP32 Core:** Version 2.0.7 (or compatible)
 * **Board Selection in IDE:** "ESP32 Dev Module"
 * **Partition Scheme:** "Max App Only (3.9MB App)"
-    * **Action:** You must add this custom partition scheme to your Arduino IDE *before* compiling. Instructions for this are located in the `partitions` folder of this project.
+    * **Action:** You must add this custom partition scheme to your Arduino IDE *before* compiling. Instructions for this are located in the `/addon/partitions` folder of this project.
+    https://github.com/VaAndCob/PrintpooP/tree/main/printpoop_app/addon/partitions
 
 * **Required Libraries:**
     * `TFT_eSPI`
