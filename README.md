@@ -41,11 +41,13 @@ HOW TO USE: 
     How to get printer IP address & Access Code:  https://wiki.bambulab.com/en/software/bambu-studio/failed-to-send-print-files
 6. Currently, there are 3 status display pages
    
-    Page 1 - Temperature / Fan
+   Page 1 - PrintpooP in action
    
-    Page 2 - Print progress
+   Page 2 - Temperature / Fan speed / progress
    
-    Page 3 - AMS filament type and colour
+   Page 3 - Print progress / remain / clock
+   
+   Page 4 - AMS filament type and colour / current slot
 
 ![Screen](/picture/screen1.jpg)
 ![Network Setup](/picture/screen2.jpg)
