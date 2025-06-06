@@ -9,7 +9,7 @@ Heads up! This firmware is still a work in progress
 It's not officially released yet, so things might break or not work as expected.
 We’re working hard to get it ready — thanks for your understanding!
 - [Flash Firmware Online for 2.4" and 2.8"](https://vaandcob.github.io/webpage/src/index.html)
-- Develop progress [ 25% ]
+- Develop progress: █████▒▒▒▒▒ 50%
 --------------------------  
 [Watch on Youtube](https://youtu.be/cmsc_lcnK_s)
 
