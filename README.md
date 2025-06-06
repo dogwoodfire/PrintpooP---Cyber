@@ -60,6 +60,14 @@ HOW TO USE: 
 - [ESP32 2.4" 240 x 320 Resistive Touch Display](s.click.aliexpress.com/e/_omgP1zh)
 - [1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
 
+## License
+
+- Code: MIT License (Non-Commercial)
+- 3D Designs: CC BY-NC-SA 4.0
+
+Commercial use is strictly prohibited. For licensing inquiries, contact [Your Contact Info].
+
+
 ---------------------------------------------------------------------------------------------------
 [![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=vaandcob&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/vaandcob)
 
