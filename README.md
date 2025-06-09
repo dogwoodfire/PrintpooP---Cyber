@@ -39,9 +39,9 @@ HOW TO USE: 
     How to get printer serial number:  https://wiki.bambulab.com/en/general/find-sn
    
     How to get printer IP address & Access Code:  https://wiki.bambulab.com/en/software/bambu-studio/failed-to-send-print-files
-6. Currently, there are 3 status display pages
+6. Currently, there are 4 status display pages
    
-   Page 1 - PrintpooP in action
+   Page 1 - PrintpooP in action (swing animation while printing -  need MPU6050 gyro sensor attached)
    
    Page 2 - Temperature / Fan speed / progress
    
