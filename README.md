@@ -60,6 +60,7 @@ HOW TO USE: 
 - [3D Print part at MakerWorld](https://makerworld.com/en/models/1432974-PrintpooP-faceplate-kit#profileId-1490390)
 - [ESP32 2.4" 240 x 320 Resistive Touch Display](s.click.aliexpress.com/e/_omgP1zh)
 - [1W 8R 2809 Loud speaker 8 ohms 1 Watt 8R 1W 28*9*3.6MM](s.click.aliexpress.com/e/_oDSKVf9)
+- [GY-521 MPU6050 3-Axis gyro accelerometer](https://s.click.aliexpress.com/e/_oF7jqOa)
 
 ## License
 
