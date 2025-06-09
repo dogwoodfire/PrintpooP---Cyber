@@ -49,6 +49,7 @@ HOW TO USE: 
    
    Page 4 - AMS filament type and colour / current slot
 
+![Swing](/picture/swing.gif)
 ![Screen](/picture/screen1.jpg)
 ![Network Setup](/picture/screen2.jpg)
 
