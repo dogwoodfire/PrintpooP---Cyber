@@ -67,7 +67,7 @@ HOW TO USE: 
 - Code: MIT License (Non-Commercial)
 - 3D Designs: CC BY-NC-SA 4.0
 
-Commercial use is strictly prohibited. For licensing inquiries, contact [Your Contact Info].
+Commercial use is strictly prohibited. For licensing inquiries, contact [Va&Cob](https://www.facebook.com/VaAndCob)
 
 
 ---------------------------------------------------------------------------------------------------
