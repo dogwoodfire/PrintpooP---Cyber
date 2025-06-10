@@ -7,7 +7,7 @@ Important Notice:
 Heads up! This firmware is still a work in progress
 It's not officially released yet, so things might break or not work as expected.
 We’re working hard to get it ready — thanks for your understanding!
-- Develop progress: █████▒▒▒▒▒ 50%
+- Develop progress: ████████▒▒ 80%
 - [Flash Firmware Online for 2.4" and 2.8"](https://vaandcob.github.io/webpage/src/index.html)
 - [Version history](https://vaandcob.github.io/webpage/firmware/printpoop/readme.md)
 --------------------------  
@@ -43,7 +43,7 @@ HOW TO USE: 
    
    Page 1 - PrintpooP in action (swing animation while printing -  need MPU6050 gyro sensor attached)
    
-   Page 2 - Temperature / Fan speed / progress
+   Page 2 - Temperature / Fan speed/progress
    
    Page 3 - Print progress / remain / clock
    
