@@ -11,7 +11,7 @@ We’re working hard to get it ready — thanks for your understanding!
 - [Flash Firmware Online for 2.4" and 2.8"](https://vaandcob.github.io/webpage/src/index.html)
 - [Version history](https://vaandcob.github.io/webpage/firmware/printpoop/readme.md)
 --------------------------  
-[Watch on Youtube](https://www.youtube.com/playlist?list=PLtzfxJvwUDCUxc5Is3-2UeWByNE8M8oDE)
+🎬[Watch on Youtube](https://www.youtube.com/playlist?list=PLtzfxJvwUDCUxc5Is3-2UeWByNE8M8oDE)
 
 ![PrintpooP](/picture/animation.gif)
 
