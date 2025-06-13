@@ -41,7 +41,13 @@ HOW TO USE: 
     How to get printer IP address & Access Code:  https://wiki.bambulab.com/en/software/bambu-studio/failed-to-send-print-files
 6. Currently, there are 4 status display pages
    
-   Page 1 - PrintpooP in action (Optional → swing animation while printing, need MPU6050 gyro sensor attached)
+   Page 1 - PrintpooP in action  (display a cute cat on each print stage)
+
+      - After one minute of inactivity, trigger a "PrintpooP" swinging animation for the idle state.
+ 
+      - After one minute of printing, initiate a "PrintpooP" swinging animation that follows the print head's movement.
+   
+        (Optional →  need MPU6050 gyro sensor attached)
    
    Page 2 - Temperature / Fan speed/progress
    
