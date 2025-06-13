@@ -7,7 +7,7 @@
 
 Preferences pref;
 
-//SHOW_MQTT_MSG
+//#define SHOW_MQTT_MSG
 
 #define ARRAY_LENGTH(arr) (sizeof(arr) / sizeof((arr)[0]))
 
@@ -15,7 +15,7 @@ int8_t pageIndex = 0;
 long clockTimer = 0;
 //flag
 bool print_finish_flag = false;
-//bool printing_flag = false;
+bool printing_flag = false;
 bool ams_flag = false;
 // long print, long idle
 bool long_idle = false;//idle longer than 1 min
@@ -404,7 +404,7 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
     text = formatMinutesToTime(printerStatus.mc_remaining_time);
     lv_label_set_text(ui_status_label_mcremaintime, text.c_str());
 
-    /*
+    
     // Print head animation
     if (!printing_flag && printerStatus.gcode_state == "RUNNING") {
       sway_Animation(ui_status_image_printhead, 0);  //start print head animation
@@ -414,7 +414,7 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
       lv_anim_del(NULL, (lv_anim_exec_xcb_t)_ui_anim_callback_set_x);  //stop print head animation
       printing_flag = false;
     }
-*/
+
     // play finish music
     if (!print_finish_flag && printerStatus.gcode_state == "FINISH" && printerStatus.mc_percent == 100) {
       print_finish_flag = true;
@@ -687,10 +687,8 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
   }
 
   // Serial.printf("Payload Length: %d\n", length);
-
   JsonDocument doc;
   JsonDocument amsFilter;
-
   amsFilter["print"]["*"] = true;
   auto deserializeError = deserializeJson(doc, payload, length, DeserializationOption::Filter(amsFilter));
 
@@ -715,8 +713,7 @@ void wifimanager_init_reset(bool test) {
   slowblink_Animation(ui_status_label_wifisymbol, 0);
   lv_label_set_text(ui_status_label_printstage, "Connecting to WiFi...");
   nonBlockDelaySec(1);
-  //load configuration first
-  pref.begin("config", true);
+  pref.begin("config", true);  //load configuration first
 
   MQTT_SERVER_IP = pref.getString("printer_ip", "0.0.0.0");
   MQTT_SERVER_PASS = pref.getString("printer_pass", "00000000");
@@ -733,7 +730,6 @@ void wifimanager_init_reset(bool test) {
   Serial.println("Access Code: " + MQTT_SERVER_PASS);
   Serial.println("Serial No: " + MQTT_SERVER_SERIAL);
   Serial.println("Timezone: " + TZoffset);
-
 
   if (test) wm.resetSettings();
   wm.setConfigPortalTimeout(180);
@@ -802,7 +798,6 @@ void saveParamsCallback() {
   MQTT_SERVER_PASS = custom_printer_access_code->getValue();
   MQTT_SERVER_SERIAL = custom_printer_serial->getValue();
   TZoffset = custom_printer_timezone->getValue();
-
   size_t bytesWrittenIP = pref.putString("printer_ip", MQTT_SERVER_IP);
   size_t bytesWrittenPass = pref.putString("printer_pass", MQTT_SERVER_PASS);
   size_t bytesWrittenSerial = pref.putString("printer_serial", MQTT_SERVER_SERIAL);
