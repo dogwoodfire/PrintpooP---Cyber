@@ -2,7 +2,7 @@
 #define MQTT_H
 
 
-#define MQTT_MAX_PACKET_SIZE 4096 // if too low, packet will lost and didn't receive
+#define MQTT_MAX_PACKET_SIZE 8192 // if too low, packet will lost and didn't receive
 
 #include <Arduino.h>
 #include <WiFi.h>
