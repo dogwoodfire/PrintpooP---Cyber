@@ -22,10 +22,10 @@
 */
 #include <Arduino.h>
 //-------------------------------------------------------
-const String version = "1.4.3";
+const String version = "1.4.4";
 const String compile_date = __DATE__ " - " __TIME__;
 
-//#define USE_TFT_28  //comment out this line to use CYD2.4"
+#define USE_TFT_28  //comment out this line to use CYD2.4"
 //-------------------------------------------------------
 
 extern "C" {
@@ -100,13 +100,13 @@ void setup() {
 #define ROTATION 2
 #define SDA_PIN 27
 #define SCL_PIN 22
-  GAIN = 0.8;
+  GAIN = 2.0;//speaker volume (recommend connect AMP IC pin 4 and 5 with R 1K ohm)
   setVersion(version, "printpoop28_manifest.json");
 #else
 #define ROTATION 1
 #define SDA_PIN 21
 #define SCL_PIN 22
-  GAIN = 5.0;
+  GAIN = 5.0;//speaker volume
   setVersion(version, "printpoop24_manifest.json");
 #endif
 

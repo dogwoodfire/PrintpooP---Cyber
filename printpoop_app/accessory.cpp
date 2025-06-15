@@ -274,7 +274,6 @@ void mpu_init(byte sda, byte scl) {
     Serial.printf("❌ MPU6050 Error: 0x%02X\n", id);
     mpu_install = false;
   }
-  // mpu_install = true;//force reading gyro sensor
 }
 //---------------------------------
 // read gate level
@@ -290,31 +289,33 @@ int16_t mpu_read() {
 //---------------------------------
 //printpoop swing animation while printing
 void print_animation() {
-  if (strcmp(lv_label_get_text(ui_status_label_printstage), "Printing") == 0) {
-    if (!print_started) {
-      print_started = true;
-      print_timer = millis();  //reset timer
-    } else {
-      if (!print_swing_now && (millis() - print_timer > 60000)) {  //time out show swing animation
-        print_swing_now = true;
-        Serial.println("print swing");
-        lv_label_set_text(ui_status_label_ppmessage, "Touch the screen to stop swinging");
-        lv_obj_add_flag(ui_status_image_ppimage, LV_OBJ_FLAG_HIDDEN);
-        lv_obj_clear_flag(ui_status_image_swing, LV_OBJ_FLAG_HIDDEN);
+  if (mpu_install) {
+    if (strcmp(lv_label_get_text(ui_status_label_printstage), "Printing") == 0) {
+      if (!print_started) {
+        print_started = true;
+        print_timer = millis();  //reset timer
+      } else {
+        if (!print_swing_now && (millis() - print_timer > 60000)) {  //time out show swing animation
+          print_swing_now = true;
+          Serial.println("print swing");
+          lv_label_set_text(ui_status_label_ppmessage, "Touch the screen to stop swinging");
+          lv_obj_add_flag(ui_status_image_ppimage, LV_OBJ_FLAG_HIDDEN);
+          lv_obj_clear_flag(ui_status_image_swing, LV_OBJ_FLAG_HIDDEN);
+        }
+      }
+    } else {  // switch back to normal animation
+      if (print_swing_now) {
+        print_started = false;
+        print_swing_now = false;
+        lv_obj_add_flag(ui_status_image_swing, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_clear_flag(ui_status_image_ppimage, LV_OBJ_FLAG_HIDDEN);
+        lv_anim_del(ui_status_image_swing, NULL);
+        lv_label_set_text(ui_status_label_ppmessage, "Meow! I am PrintpooP (Swipe left/right for pages)");
       }
     }
-  } else { // switch back to normal animation
-    if (print_swing_now) {
-      print_started = false;
-      print_swing_now = false;
-      lv_obj_add_flag(ui_status_image_swing, LV_OBJ_FLAG_HIDDEN);
-      lv_obj_clear_flag(ui_status_image_ppimage, LV_OBJ_FLAG_HIDDEN);
-      lv_anim_del(ui_status_image_swing, NULL);
-      lv_label_set_text(ui_status_label_ppmessage, "Meow! I am PrintpooP (Swipe left/right for pages)");
-    }
-  }
 
-  if (mpu_install && print_swing_now) {  //animate swing animation
-    lv_img_set_angle(ui_status_image_swing, mpu_read());
+    if (print_swing_now) {  //animate swing animation
+      lv_img_set_angle(ui_status_image_swing, mpu_read());
+    }
   }
 }

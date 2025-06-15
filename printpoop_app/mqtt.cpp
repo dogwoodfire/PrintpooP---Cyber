@@ -185,58 +185,45 @@ String formatMinutesToTime(int totalMinutes) {
 //-----------
 // Map temperature (0–300°C) to a 24-bit RGB color (0xRRGGBB)
 uint32_t temperatureToColor(int temperatureC) {
-  // Clamp temperature
-  if (temperatureC < 0) temperatureC = 0;
+  if (temperatureC < 25) temperatureC = 25;
   if (temperatureC > 300) temperatureC = 300;
 
-  // Map temperature to hue: 0°C = 240 (blue), 300°C = 0 (red)
-  // We'll use hue range [0, 240] (scaled to 0–255)
-  uint8_t hue = (uint8_t)((300 - temperatureC) * 255L / 300);  // inverse mapping
-
-  // Convert HSV to RGB (S = 255, V = 255)
-  uint8_t region = hue / 43;
-  uint8_t remainder = (hue - (region * 43)) * 6;
-
-  uint8_t p = 0;
-  uint8_t q = 255 - ((remainder * 255) / 255);
-  uint8_t t = (remainder * 255) / 255;
-
-  uint8_t r, g, b;
-  switch (region) {
-    case 0:
-      r = 255;
-      g = t;
-      b = p;
-      break;
-    case 1:
-      r = q;
-      g = 255;
-      b = p;
-      break;
-    case 2:
-      r = p;
-      g = 255;
-      b = t;
-      break;
-    case 3:
-      r = p;
-      g = q;
-      b = 255;
-      break;
-    case 4:
-      r = t;
-      g = p;
-      b = 255;
-      break;
-    default:
-      r = 255;
-      g = p;
-      b = q;
-      break;
+  float hue;
+  if (temperatureC <= 100) {
+    hue = 240.0f - (temperatureC - 25.0f) * (60.0f / 75.0f); // Blue to Cyan
+  } else if (temperatureC <= 180) {
+    hue = 180.0f - (temperatureC - 100.0f) * (60.0f / 80.0f); // Cyan to Green
+  } else if (temperatureC <= 250) {
+    hue = 120.0f - (temperatureC - 180.0f) * (60.0f / 70.0f); // Green to Yellow
+  } else if (temperatureC <= 270) {
+    hue = 60.0f - (temperatureC - 250.0f) * (60.0f / 20.0f); // Yellow to Red
+  } else {
+    hue = 360.0f - (temperatureC - 270.0f) * (60.0f / 30.0f); // Red to Violet
+    if (hue < 0) hue += 360.0f;
   }
 
-  return ((uint32_t)r << 16) | ((uint32_t)g << 8) | b;
+  float s = 1.0f, v = 1.0f;
+  float h = hue / 60.0f;
+  int i = (int)h;
+  float f = h - i;
+  float p = v * (1 - s);
+  float q = v * (1 - f * s);
+  float t = v * (1 - (1 - f) * s);
+
+  float r, g, b;
+  switch (i % 6) {
+    case 0: r = v; g = t; b = p; break;
+    case 1: r = q; g = v; b = p; break;
+    case 2: r = p; g = v; b = t; break;
+    case 3: r = p; g = q; b = v; break;
+    case 4: r = t; g = p; b = v; break;
+    case 5: r = v; g = p; b = q; break;
+    default: r = g = b = 0; break;
+  }
+
+  return ((uint32_t)(r * 255) << 16) | ((uint32_t)(g * 255) << 8) | (uint32_t)(b * 255);
 }
+
 //-----------
 // change printpoop image by stage
 static int cur_stage_id = -1;  // idle
