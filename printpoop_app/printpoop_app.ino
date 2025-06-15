@@ -22,10 +22,10 @@
 */
 #include <Arduino.h>
 //-------------------------------------------------------
-const String version = "1.4.4";
+const String version = "1.4.5";
 const String compile_date = __DATE__ " - " __TIME__;
 
-//#define USE_TFT_28  //comment out this line to use CYD2.4"
+#define USE_TFT_28  //comment out this line to use CYD2.4"
 //-------------------------------------------------------
 
 extern "C" {
@@ -47,6 +47,9 @@ extern "C" {
 //Pin configuration
 #define SELECTOR_PIN 0
 #define LDR_PIN 34
+#define LED_RED 4
+#define LED_GREEN 16
+#define LED_BLUE 17
 
 // SOUNDER and RTC
 #include "accessory.h"
@@ -114,8 +117,15 @@ void setup() {
   analogSetAttenuation(ADC_0db);        // 0dB(1.0 ครั้ง) 0~800mV   for LDR
   pinMode(LDR_PIN, ANALOG);             //ldr analog input read brightness
   pinMode(SELECTOR_PIN, INPUT_PULLUP);  //button
+  pinMode(LED_RED, OUTPUT);
+  pinMode(LED_GREEN, OUTPUT);
+  pinMode(LED_BLUE, OUTPUT);
+  digitalWrite(LED_RED, HIGH);
+  digitalWrite(LED_GREEN, HIGH);
+  digitalWrite(LED_BLUE, HIGH);
 
-  mpu_init(SDA_PIN, SCL_PIN);
+  mpu_init(SDA_PIN, SCL_PIN);// init MPU6050
+
   //init TFT
   tft.begin();
   tft.setRotation(ROTATION);  //Portrait

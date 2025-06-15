@@ -18,9 +18,9 @@ bool print_finish_flag = false;
 bool printing_flag = false;
 bool ams_flag = false;
 // long print, long idle
-bool long_idle = false;//idle longer than 1 min
-static long idle_timer = 0;//idle timer counter
-bool idle_swing_now = false;// swing animation flag
+bool long_idle = false;       //idle longer than 1 min
+static long idle_timer = 0;   //idle timer counter
+bool idle_swing_now = false;  // swing animation flag
 
 bool long_print = false;
 long print_timer = 0;
@@ -115,21 +115,21 @@ void idle_animation() {
     } else {
       if (!idle_swing_now && (millis() - idle_timer > 60000)) {  //time out
         idle_swing_now = true;
-        lv_obj_add_flag(ui_status_image_ppimage,LV_OBJ_FLAG_HIDDEN);
-        lv_obj_clear_flag(ui_status_image_swing,LV_OBJ_FLAG_HIDDEN);
+        lv_obj_add_flag(ui_status_image_ppimage, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_clear_flag(ui_status_image_swing, LV_OBJ_FLAG_HIDDEN);
         swing_Animation(ui_status_image_swing, 0);  //swing animation
         Serial.println("Swing");
-        lv_label_set_text(ui_status_label_ppmessage,"Touch the screen to stop swinging");
+        lv_label_set_text(ui_status_label_ppmessage, "Touch the screen to stop swinging");
       }
     }
   } else {            //not idle
     if (long_idle) {  //stop swing animation
       long_idle = false;
       idle_swing_now = false;
-      lv_obj_add_flag(ui_status_image_swing,LV_OBJ_FLAG_HIDDEN);
-      lv_obj_clear_flag(ui_status_image_ppimage,LV_OBJ_FLAG_HIDDEN);
+      lv_obj_add_flag(ui_status_image_swing, LV_OBJ_FLAG_HIDDEN);
+      lv_obj_clear_flag(ui_status_image_ppimage, LV_OBJ_FLAG_HIDDEN);
       lv_anim_del(ui_status_image_swing, NULL);
-      lv_label_set_text(ui_status_label_ppmessage,"Meow! I am PrintpooP (Swipe left/right for pages)");
+      lv_label_set_text(ui_status_label_ppmessage, "Meow! I am PrintpooP (Swipe left/right for pages)");
     }
   }
 }
@@ -190,15 +190,15 @@ uint32_t temperatureToColor(int temperatureC) {
 
   float hue;
   if (temperatureC <= 100) {
-    hue = 240.0f - (temperatureC - 25.0f) * (60.0f / 75.0f); // Blue to Cyan
+    hue = 240.0f - (temperatureC - 25.0f) * (60.0f / 75.0f);  // Blue to Cyan
   } else if (temperatureC <= 180) {
-    hue = 180.0f - (temperatureC - 100.0f) * (60.0f / 80.0f); // Cyan to Green
+    hue = 180.0f - (temperatureC - 100.0f) * (60.0f / 80.0f);  // Cyan to Green
   } else if (temperatureC <= 250) {
-    hue = 120.0f - (temperatureC - 180.0f) * (60.0f / 70.0f); // Green to Yellow
+    hue = 120.0f - (temperatureC - 180.0f) * (60.0f / 70.0f);  // Green to Yellow
   } else if (temperatureC <= 270) {
-    hue = 60.0f - (temperatureC - 250.0f) * (60.0f / 20.0f); // Yellow to Red
+    hue = 60.0f - (temperatureC - 250.0f) * (60.0f / 20.0f);  // Yellow to Red
   } else {
-    hue = 360.0f - (temperatureC - 270.0f) * (60.0f / 30.0f); // Red to Violet
+    hue = 360.0f - (temperatureC - 270.0f) * (60.0f / 30.0f);  // Red to Violet
     if (hue < 0) hue += 360.0f;
   }
 
@@ -212,12 +212,36 @@ uint32_t temperatureToColor(int temperatureC) {
 
   float r, g, b;
   switch (i % 6) {
-    case 0: r = v; g = t; b = p; break;
-    case 1: r = q; g = v; b = p; break;
-    case 2: r = p; g = v; b = t; break;
-    case 3: r = p; g = q; b = v; break;
-    case 4: r = t; g = p; b = v; break;
-    case 5: r = v; g = p; b = q; break;
+    case 0:
+      r = v;
+      g = t;
+      b = p;
+      break;
+    case 1:
+      r = q;
+      g = v;
+      b = p;
+      break;
+    case 2:
+      r = p;
+      g = v;
+      b = t;
+      break;
+    case 3:
+      r = p;
+      g = q;
+      b = v;
+      break;
+    case 4:
+      r = t;
+      g = p;
+      b = v;
+      break;
+    case 5:
+      r = v;
+      g = p;
+      b = q;
+      break;
     default: r = g = b = 0; break;
   }
 
@@ -329,7 +353,7 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
         currentPrintStatus = "Preparing";
         cur_stage_id = 8;
         lv_anim_del(NULL, (lv_anim_exec_xcb_t)_ui_anim_callback_set_x);  //stop print head animation
-      } else if (printerStatus.gcode_state == "RUNNING") {                 //If gcode_state is "RUNNING", it uses stg_cur with CURRENT_STAGE_IDS_MAP to determine the specific operation.
+      } else if (printerStatus.gcode_state == "RUNNING") {               //If gcode_state is "RUNNING", it uses stg_cur with CURRENT_STAGE_IDS_MAP to determine the specific operation.
         if (!incomingJson["print"]["stg_cur"].isNull()) {
           SET_IF_EXISTS(int, stg_cur, stg_cur);
           currentPrintStatus = getStageName(printerStatus.stg_cur);
@@ -359,11 +383,11 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
     }  // else gcode_state not present
 
     //2. ------------ Printing parameter ---------------------------
-    SET_IF_EXISTS(int, nozzle_temper, nozzle_temper);
+    SET_IF_EXISTS(float, nozzle_temper, nozzle_temper);
     SET_IF_EXISTS(int, nozzle_target_temper, nozzle_target_temper);
-    SET_IF_EXISTS(int, bed_temper, bed_temper);
+    SET_IF_EXISTS(float, bed_temper, bed_temper);
     SET_IF_EXISTS(int, bed_target_temper, bed_target_temper);
-    SET_IF_EXISTS(int, chamber_temper, chamber_temper);
+    SET_IF_EXISTS(float, chamber_temper, chamber_temper);
     SET_IF_EXISTS(int, heatbreak_fan_speed, heatbreak_fan_speed);
     SET_IF_EXISTS(int, cooling_fan_speed, cooling_fan_speed);
     SET_IF_EXISTS(int, mc_percent, mc_percent);
@@ -377,11 +401,11 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
     lv_bar_set_value(ui_status_bar_mcpercent2, printerStatus.mc_percent, LV_ANIM_ON);
     // Page 1
     lv_obj_set_style_text_color(ui_status_label_nozzletemp, lv_color_hex(tempColour), LV_PART_MAIN | LV_STATE_DEFAULT);
-    text = String(printerStatus.nozzle_temper) + "/" + String(printerStatus.nozzle_target_temper);
+    text = String((int)round(printerStatus.nozzle_temper)) + "/" + String(printerStatus.nozzle_target_temper);
     lv_label_set_text(ui_status_label_nozzletemp, text.c_str());
-    text = String(printerStatus.bed_temper) + "/" + String(printerStatus.bed_target_temper);
+    text = String((int)round(printerStatus.bed_temper)) + "/" + String(printerStatus.bed_target_temper);
     lv_label_set_text(ui_status_label_bedtemp, text.c_str());
-    text = String(printerStatus.chamber_temper);
+    text = String((int)round(printerStatus.chamber_temper));
     lv_label_set_text(ui_status_label_chambertemp, text.c_str());
     lv_bar_set_value(ui_status_bar_heatbreakfan, printerStatus.heatbreak_fan_speed, LV_ANIM_ON);
     lv_bar_set_value(ui_status_bar_coolingfan, printerStatus.cooling_fan_speed, LV_ANIM_ON);
@@ -391,7 +415,7 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
     text = formatMinutesToTime(printerStatus.mc_remaining_time);
     lv_label_set_text(ui_status_label_mcremaintime, text.c_str());
 
-    
+
     // Print head animation
     if (!printing_flag && printerStatus.gcode_state == "RUNNING") {
       sway_Animation(ui_status_image_printhead, 0);  //start print head animation
@@ -411,7 +435,34 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
     if (print_finish_flag && printerStatus.mc_percent == 0) print_finish_flag = false;  //reset flag
 
     //3. ------------ AMS -------------------------------
-    if (!incomingJson["print"]["ams"].isNull()) {                      // check if mqtt message available
+    if (!incomingJson["print"]["ams"].isNull()) {  // check if mqtt message available
+                                                   // update current slot
+      if (!incomingJson["print"]["ams"]["tray_now"].isNull()) {
+        //stop all SLOT label blinking
+        lv_anim_del(NULL, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+        lv_obj_set_style_opa(ui_status_label_filament1, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_opa(ui_status_label_filament2, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_opa(ui_status_label_filament3, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_opa(ui_status_label_filament4, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+        printerStatus.ams_tray_now = incomingJson["print"]["ams"]["tray_now"].as<int>();
+        switch (printerStatus.ams_tray_now) {
+          case 0:
+            slowblink_Animation(ui_status_label_filament1, 0);
+            break;
+          case 1:
+            slowblink_Animation(ui_status_label_filament2, 0);
+            break;
+          case 2:
+            slowblink_Animation(ui_status_label_filament3, 0);
+            break;
+          case 3:
+            slowblink_Animation(ui_status_label_filament4, 0);
+            break;
+          default:  // ams_tray_now = 255
+            break;
+        }
+      }
+      //update AMS information
       SET_IF_EXISTS_2(int, ams, tray_now, ams_tray_now);               // get current slot
       SET_IF_EXISTS_2(long int, ams, ams_exist_bits, ams_exist_bits);  // check if AMS attached
       //Serial.printf("tray_now %d , ams_exist_bits %d\n", printerStatus.ams_tray_now, printerStatus.ams_exist_bits);
@@ -444,29 +495,49 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
                     lv_obj_set_style_bg_color(ui_status_button_slot1, hexColor, LV_PART_MAIN);
                     lv_obj_set_style_bg_opa(ui_status_button_slot1, hexAlpha, LV_PART_MAIN);
                     lv_label_set_text(ui_status_label_filament1, printerStatus.amsTrays[0].type.c_str());
-                    if (printerStatus.ams_tray_now == 0) slowblink_Animation(ui_status_label_filament1, 0);
-                    else lv_anim_del(ui_status_label_filament1, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+                    if (printerStatus.ams_tray_now == 0) {
+                      lv_anim_del(NULL, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+                      lv_obj_set_style_opa(ui_status_label_filament2, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      lv_obj_set_style_opa(ui_status_label_filament3, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      lv_obj_set_style_opa(ui_status_label_filament4, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      slowblink_Animation(ui_status_label_filament1, 0);
+                    }
                     break;
                   case 1:
                     lv_obj_set_style_bg_color(ui_status_button_slot2, hexColor, LV_PART_MAIN);
                     lv_obj_set_style_bg_opa(ui_status_button_slot2, hexAlpha, LV_PART_MAIN);
                     lv_label_set_text(ui_status_label_filament2, printerStatus.amsTrays[1].type.c_str());
-                    if (printerStatus.ams_tray_now == 1) slowblink_Animation(ui_status_label_filament2, 0);
-                    else lv_anim_del(ui_status_label_filament2, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+                    if (printerStatus.ams_tray_now == 1) {
+                      lv_anim_del(NULL, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+                      lv_obj_set_style_opa(ui_status_label_filament1, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      lv_obj_set_style_opa(ui_status_label_filament3, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      lv_obj_set_style_opa(ui_status_label_filament4, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      slowblink_Animation(ui_status_label_filament2, 0);
+                    }
                     break;
                   case 2:
                     lv_obj_set_style_bg_color(ui_status_button_slot3, hexColor, LV_PART_MAIN);
                     lv_obj_set_style_bg_opa(ui_status_button_slot3, hexAlpha, LV_PART_MAIN);
                     lv_label_set_text(ui_status_label_filament3, printerStatus.amsTrays[2].type.c_str());
-                    if (printerStatus.ams_tray_now == 2) slowblink_Animation(ui_status_label_filament3, 0);
-                    else lv_anim_del(ui_status_label_filament3, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+                    if (printerStatus.ams_tray_now == 2) {
+                      lv_anim_del(NULL, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+                      lv_obj_set_style_opa(ui_status_label_filament1, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      lv_obj_set_style_opa(ui_status_label_filament2, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      lv_obj_set_style_opa(ui_status_label_filament4, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      slowblink_Animation(ui_status_label_filament3, 0);
+                    }
                     break;
                   case 3:
                     lv_obj_set_style_bg_color(ui_status_button_slot4, hexColor, LV_PART_MAIN);
                     lv_obj_set_style_bg_opa(ui_status_button_slot4, hexAlpha, LV_PART_MAIN);
                     lv_label_set_text(ui_status_label_filament4, printerStatus.amsTrays[3].type.c_str());
-                    if (printerStatus.ams_tray_now == 3) slowblink_Animation(ui_status_label_filament4, 0);
-                    else lv_anim_del(ui_status_label_filament4, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+                    if (printerStatus.ams_tray_now == 3) {
+                      lv_anim_del(NULL, (lv_anim_exec_xcb_t)_ui_anim_callback_set_opacity);
+                      lv_obj_set_style_opa(ui_status_label_filament1, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      lv_obj_set_style_opa(ui_status_label_filament2, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      lv_obj_set_style_opa(ui_status_label_filament3, LV_OPA_COVER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                      slowblink_Animation(ui_status_label_filament4, 0);
+                    }
                     break;
                 }  // switch
 
@@ -489,12 +560,12 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
                     lv_label_set_text(ui_status_label_filament4, "");
                     lv_obj_set_style_bg_opa(ui_status_button_slot4, LV_OPA_TRANSP, LV_PART_MAIN);
                     break;
-                }                             // switch
-              }                               //if traytypevariant
-            }                                 // End of trayId validation
-          }                                   // End of forEach tray
-        }                                     // End of if trays
-      }                                       // End of forEach amsUnit
+                }  // switch
+              }    //if traytypevariant
+            }      // End of trayId validation
+          }        // End of forEach tray
+        }          // End of if trays
+      }            // End of forEach amsUnit
       //AMS icon
       if (!ams_flag && printerStatus.ams_exist_bits == 1) {  // show
         lv_obj_clear_flag(ui_status_image_ams, LV_OBJ_FLAG_HIDDEN);
@@ -913,4 +984,35 @@ void saveParamsCallback() {
     "command": "push_status",
     "msg": 1,
     "sequence_id": "2056"
-  },*/
+  },
+  {
+  "print": {
+    "nozzle_temper": 255.03125,
+    "bed_temper": 80.0625,
+    "heatbreak_fan_speed": "9",
+    "ams_status": 263,
+    "wifi_signal": "-49dBm",
+    "ams": {
+      "tray_now": "1",//select slot 1
+      "version": 55
+    },
+    "command": "push_status",
+    "msg": 1,
+    "sequence_id": "3680"
+  }
+}
+{
+  "print": {
+    "nozzle_temper": 255.53125,
+    "bed_temper": 79.875,
+    "heatbreak_fan_speed": "9",
+    "ams_status": 261,
+    "ams": {
+      "tray_now": "255",//no slot selected
+      "version": 54
+    },
+    "command": "push_status",
+    "msg": 1,
+    "sequence_id": "3673"
+  }
+}*/

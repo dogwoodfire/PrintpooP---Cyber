@@ -74,12 +74,12 @@ typedef struct BambuMQTTPayload {
   String gcode_state;
 //  int plate_index;
 //  char task_id[32];
-  int bed_temper;
+  float bed_temper;
   int bed_target_temper;
 //  int frame_temp;
-  int nozzle_temper;
+  float nozzle_temper;
   int nozzle_target_temper;
-  int chamber_temper;
+  float chamber_temper;
 //  int wifi_signal;
   int heatbreak_fan_speed;
   int cooling_fan_speed;
