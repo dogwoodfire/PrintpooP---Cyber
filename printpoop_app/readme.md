@@ -57,7 +57,7 @@ You need to configure the project for either a 2.4" or 2.8" screen by editing tw
         ```
 
 2.  **Edit `printpoop_app.ino`** (your main sketch file):
-    * Go to approximately line 28 and make sure the `USE_TFT_28` macro is commented out:
+    * Go to approximately line 25 and make sure the `USE_TFT_28` macro is commented out:
         ```cpp
         // #define USE_TFT_28 // Should be commented out for 2.4" screen
         ```
@@ -72,7 +72,7 @@ You need to configure the project for either a 2.4" or 2.8" screen by editing tw
         ```
 
 2.  **Edit `printpoop_app.ino`** (your main sketch file):
-    * Go to line 28 and make sure the `USE_TFT_28` macro is defined (uncommented):
+    * Go to approximately line 25 and make sure the `USE_TFT_28` macro is defined (uncommented):
         ```cpp
         #define USE_TFT_28 // Should be active for 2.8" screen
         ```
