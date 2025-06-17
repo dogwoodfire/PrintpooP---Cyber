@@ -2,13 +2,17 @@
 
 This guide provides instructions on how to set up your environment and compile the source code for the PrintPooP project.
 
+## 0. Add an additional Partition Scheme
+
+https://github.com/VaAndCob/PrintpooP/blob/main/printpoop_app/addon/partitions/readme.md
+
 ## 1. Prerequisites & Setup
 
 Ensure your environment matches the following requirements:
 
 * **Hardware:** CYD 2.4" ESP32 Dev Board (or compatible 2.8" version, see specific setup below)
 * **IDE:** Arduino IDE 2.3.6 (or compatible)
-* **ESP32 Core:** Version 2.0.7 (or compatible)
+* **ESP32 Core:** Version 2.0.17 (or compatible)
 * **Board Selection in IDE:** "ESP32 Dev Module"
 * **Partition Scheme:** "Max App Only (3.9MB App)"
     * **Action:** You must add this custom partition scheme to your Arduino IDE *before* compiling. Instructions for this are located in the `/addon/partitions` folder of this project.
