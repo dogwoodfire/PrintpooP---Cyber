@@ -9,7 +9,7 @@ It's not officially released yet, so things might break or not work as expected.
 We’re working hard to get it ready — thanks for your understanding!
 - Develop progress: ████████▒▒ 80%
 - [Flash Firmware Online for 2.4" and 2.8"](https://vaandcob.github.io/webpage/src/index.html)
-- [Version history](https://vaandcob.github.io/webpage/firmware/printpoop/readme.md)
+- [Version history](https://github.com/VaAndCob/PrintpooP/blob/main/CHANGELOG.md)
 --------------------------  
 🎬[Watch on Youtube](https://www.youtube.com/playlist?list=PLtzfxJvwUDCUxc5Is3-2UeWByNE8M8oDE)
 
