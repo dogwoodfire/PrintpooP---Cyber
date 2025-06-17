@@ -19,8 +19,8 @@ Ensure your environment matches the following requirements:
     https://github.com/VaAndCob/PrintpooP/tree/main/printpoop_app/addon/partitions
 
 * **Required Libraries:**
-    * `TFT_eSPI`
-    * `lvgl`
+    * `TFT_eSPI 2.5.43`
+    * `lvgl 8.3.11`
     * *(And any other libraries specified as needed by the sketch)*
     * **Action:** Ensure all necessary libraries are installed in your Arduino IDE.
 
