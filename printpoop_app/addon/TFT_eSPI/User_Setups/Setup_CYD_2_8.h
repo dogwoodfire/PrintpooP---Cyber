@@ -4,7 +4,7 @@
 #define TFT_WIDTH  240
 #define TFT_HEIGHT 320  
 
-#define TFT_RGB_ORDER TFT_BGRn //blue green red
+#define TFT_RGB_ORDER TFT_BGR //blue green red
 
 // TFT display pins
 #define TFT_BL   21            // LED back-light control pin
