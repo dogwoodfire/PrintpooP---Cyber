@@ -1,4 +1,6 @@
 ## Version history
+### 1.4.6
+- Add printing layer label
 ### 1.4.5
 - AMS current slot display fixed.
 - Temperature display fixed.
