@@ -43,6 +43,8 @@ extern lv_obj_t *ui_status_panel_page2;
 extern lv_obj_t *ui_status_label_mcremaintime;
 extern lv_obj_t *ui_status_label_clock;
 extern lv_obj_t *ui_status_arc_mcpercentarc;
+extern lv_obj_t *ui_status_label_layernum;
+extern lv_obj_t *ui_status_label_layertotal;
 extern lv_obj_t *ui_status_panel_page3;
 extern lv_obj_t *ui_status_image_checker;
 extern lv_obj_t *ui_status_button_slot1;

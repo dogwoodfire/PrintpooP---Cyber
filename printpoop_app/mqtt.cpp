@@ -392,14 +392,16 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
     SET_IF_EXISTS(int, cooling_fan_speed, cooling_fan_speed);
     SET_IF_EXISTS(int, mc_percent, mc_percent);
     SET_IF_EXISTS(int, mc_remaining_time, mc_remaining_time);
+    SET_IF_EXISTS(int, layer_num, layer_num);
+    SET_IF_EXISTS(int, total_layer_num, total_layer_num);
     //update display
     String text = "";
     uint32_t tempColour = temperatureToColor(printerStatus.nozzle_temper);
     //border color
     lv_obj_set_style_border_color(ui_screen_status, lv_color_hex(tempColour), LV_PART_MAIN | LV_STATE_DEFAULT);
-    // Page 0                                                                                                  //printpoop page
+    // Page 0  printpoop page
     lv_bar_set_value(ui_status_bar_mcpercent2, printerStatus.mc_percent, LV_ANIM_ON);
-    // Page 1
+    // Page 1  temperature
     lv_obj_set_style_text_color(ui_status_label_nozzletemp, lv_color_hex(tempColour), LV_PART_MAIN | LV_STATE_DEFAULT);
     text = String((int)round(printerStatus.nozzle_temper)) + "/" + String(printerStatus.nozzle_target_temper);
     lv_label_set_text(ui_status_label_nozzletemp, text.c_str());
@@ -410,8 +412,12 @@ static void update_print_status(JsonDocument& incomingJson, uint8_t page) {
     lv_bar_set_value(ui_status_bar_heatbreakfan, printerStatus.heatbreak_fan_speed, LV_ANIM_ON);
     lv_bar_set_value(ui_status_bar_coolingfan, printerStatus.cooling_fan_speed, LV_ANIM_ON);
     lv_bar_set_value(ui_status_bar_mcpercent, printerStatus.mc_percent, LV_ANIM_ON);
-    // Page 2
+    // Page 2 progress
     lv_arc_set_value(ui_status_arc_mcpercentarc, printerStatus.mc_percent);
+    text = String(printerStatus.layer_num);
+    lv_label_set_text(ui_status_label_layernum, text.c_str());
+    text = String(printerStatus.total_layer_num);
+    lv_label_set_text(ui_status_label_layertotal, text.c_str());
     text = formatMinutesToTime(printerStatus.mc_remaining_time);
     lv_label_set_text(ui_status_label_mcremaintime, text.c_str());
 

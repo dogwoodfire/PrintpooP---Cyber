@@ -5,7 +5,7 @@
 
 #include "ui.h"
 
-lv_obj_t *ui_screen_status = NULL;lv_obj_t *ui_status_label_printstage = NULL;lv_obj_t *ui_status_label_wifisymbol = NULL;lv_obj_t *ui_status_image_printer = NULL;lv_obj_t *ui_status_image_ams = NULL;lv_obj_t *ui_status_button_networksetup = NULL;lv_obj_t *ui_status_label_label1 = NULL;lv_obj_t *ui_status_panel_page0 = NULL;lv_obj_t *ui_status_image_swing = NULL;lv_obj_t *ui_status_bar_mcpercent2 = NULL;lv_obj_t *ui_status_image_ppimage = NULL;lv_obj_t *ui_status_label_ppmessage = NULL;lv_obj_t *ui_status_panel_page1 = NULL;lv_obj_t *ui_status_image_printbase = NULL;lv_obj_t *ui_status_image_printhead = NULL;lv_obj_t *ui_status_label_nozzletemp = NULL;lv_obj_t *ui_status_label_bedtemp = NULL;lv_obj_t *ui_status_label_chambertemp = NULL;lv_obj_t *ui_status_bar_coolingfan = NULL;lv_obj_t *ui_status_bar_heatbreakfan = NULL;lv_obj_t *ui_status_spinner_spinner2 = NULL;lv_obj_t *ui_status_spinner_spinner1 = NULL;lv_obj_t *ui_status_bar_mcpercent = NULL;lv_obj_t *ui_status_panel_page2 = NULL;lv_obj_t *ui_status_label_mcremaintime = NULL;lv_obj_t *ui_status_label_clock = NULL;lv_obj_t *ui_status_arc_mcpercentarc = NULL;lv_obj_t *ui_status_panel_page3 = NULL;lv_obj_t *ui_status_image_checker = NULL;lv_obj_t *ui_status_button_slot1 = NULL;lv_obj_t *ui_status_button_slot2 = NULL;lv_obj_t *ui_status_button_slot3 = NULL;lv_obj_t *ui_status_button_slot4 = NULL;lv_obj_t *ui_status_button_slot0 = NULL;lv_obj_t *ui_status_image_amsbox = NULL;lv_obj_t *ui_status_label_filament1 = NULL;lv_obj_t *ui_status_label_filament2 = NULL;lv_obj_t *ui_status_label_filament3 = NULL;lv_obj_t *ui_status_label_filament4 = NULL;lv_obj_t *ui_status_label_filament0 = NULL;
+lv_obj_t *ui_screen_status = NULL;lv_obj_t *ui_status_label_printstage = NULL;lv_obj_t *ui_status_label_wifisymbol = NULL;lv_obj_t *ui_status_image_printer = NULL;lv_obj_t *ui_status_image_ams = NULL;lv_obj_t *ui_status_button_networksetup = NULL;lv_obj_t *ui_status_label_label1 = NULL;lv_obj_t *ui_status_panel_page0 = NULL;lv_obj_t *ui_status_image_swing = NULL;lv_obj_t *ui_status_bar_mcpercent2 = NULL;lv_obj_t *ui_status_image_ppimage = NULL;lv_obj_t *ui_status_label_ppmessage = NULL;lv_obj_t *ui_status_panel_page1 = NULL;lv_obj_t *ui_status_image_printbase = NULL;lv_obj_t *ui_status_image_printhead = NULL;lv_obj_t *ui_status_label_nozzletemp = NULL;lv_obj_t *ui_status_label_bedtemp = NULL;lv_obj_t *ui_status_label_chambertemp = NULL;lv_obj_t *ui_status_bar_coolingfan = NULL;lv_obj_t *ui_status_bar_heatbreakfan = NULL;lv_obj_t *ui_status_spinner_spinner2 = NULL;lv_obj_t *ui_status_spinner_spinner1 = NULL;lv_obj_t *ui_status_bar_mcpercent = NULL;lv_obj_t *ui_status_panel_page2 = NULL;lv_obj_t *ui_status_label_mcremaintime = NULL;lv_obj_t *ui_status_label_clock = NULL;lv_obj_t *ui_status_arc_mcpercentarc = NULL;lv_obj_t *ui_status_label_layernum = NULL;lv_obj_t *ui_status_label_layertotal = NULL;lv_obj_t *ui_status_panel_page3 = NULL;lv_obj_t *ui_status_image_checker = NULL;lv_obj_t *ui_status_button_slot1 = NULL;lv_obj_t *ui_status_button_slot2 = NULL;lv_obj_t *ui_status_button_slot3 = NULL;lv_obj_t *ui_status_button_slot4 = NULL;lv_obj_t *ui_status_button_slot0 = NULL;lv_obj_t *ui_status_image_amsbox = NULL;lv_obj_t *ui_status_label_filament1 = NULL;lv_obj_t *ui_status_label_filament2 = NULL;lv_obj_t *ui_status_label_filament3 = NULL;lv_obj_t *ui_status_label_filament4 = NULL;lv_obj_t *ui_status_label_filament0 = NULL;
 // event funtions
 void ui_event_screen_status( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -410,6 +410,36 @@ lv_obj_set_style_arc_rounded(ui_status_arc_mcpercentarc, false, LV_PART_INDICATO
 lv_obj_set_style_bg_color(ui_status_arc_mcpercentarc, lv_color_hex(0xFFFFFF), LV_PART_KNOB | LV_STATE_DEFAULT );
 lv_obj_set_style_bg_opa(ui_status_arc_mcpercentarc, 0, LV_PART_KNOB| LV_STATE_DEFAULT);
 
+ui_status_label_layernum = lv_label_create(ui_status_panel_page2);
+lv_obj_set_width( ui_status_label_layernum, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_status_label_layernum, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_status_label_layernum, 0 );
+lv_obj_set_y( ui_status_label_layernum, 30 );
+lv_obj_set_align( ui_status_label_layernum, LV_ALIGN_CENTER );
+lv_label_set_text(ui_status_label_layernum,"-");
+lv_obj_set_style_text_color(ui_status_label_layernum, lv_color_hex(0x0290FF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_status_label_layernum, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_align(ui_status_label_layernum, LV_TEXT_ALIGN_AUTO, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_status_label_layernum, &lv_font_montserrat_22, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_border_width(ui_status_label_layernum, 1, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_border_side(ui_status_label_layernum, LV_BORDER_SIDE_TOP, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_status_label_layertotal = lv_label_create(ui_status_panel_page2);
+lv_obj_set_width( ui_status_label_layertotal, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_status_label_layertotal, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_status_label_layertotal, 0 );
+lv_obj_set_y( ui_status_label_layertotal, 55 );
+lv_obj_set_align( ui_status_label_layertotal, LV_ALIGN_CENTER );
+lv_label_set_text(ui_status_label_layertotal,"-");
+lv_obj_set_style_text_color(ui_status_label_layertotal, lv_color_hex(0x0290FF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_status_label_layertotal, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_align(ui_status_label_layertotal, LV_TEXT_ALIGN_AUTO, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_status_label_layertotal, &lv_font_montserrat_22, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_border_color(ui_status_label_layertotal, lv_color_hex(0x003BFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_border_opa(ui_status_label_layertotal, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_border_width(ui_status_label_layertotal, 2, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_border_side(ui_status_label_layertotal, LV_BORDER_SIDE_TOP, LV_PART_MAIN| LV_STATE_DEFAULT);
+
 ui_status_panel_page3 = lv_obj_create(ui_screen_status);
 lv_obj_set_width( ui_status_panel_page3, 220);
 lv_obj_set_height( ui_status_panel_page3, 220);
@@ -644,6 +674,8 @@ ui_status_panel_page2= NULL;
 ui_status_label_mcremaintime= NULL;
 ui_status_label_clock= NULL;
 ui_status_arc_mcpercentarc= NULL;
+ui_status_label_layernum= NULL;
+ui_status_label_layertotal= NULL;
 ui_status_panel_page3= NULL;
 ui_status_image_checker= NULL;
 ui_status_button_slot1= NULL;

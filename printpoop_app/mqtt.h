@@ -61,8 +61,8 @@ typedef struct BambuMQTTPayload {
   int print_error;
 //  char printer_type[32];
 //  char subtask_name[32];
-//  int current_layer;
-//  int total_layers;
+  int layer_num;
+  int total_layer_num;
   int print_status;
 //  int queue_number;
 //  int gcode_file_prepare_percent;
