@@ -51,7 +51,7 @@ HOW TO USE: 
    
    Page 2 - Temperature / Fan speed/progress
    
-   Page 3 - Print progress / remain / clock
+   Page 3 - Print progress / remain / layer / clock
    
    Page 4 - AMS filament type and colour / current slot
 
