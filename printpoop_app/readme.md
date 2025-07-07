@@ -42,7 +42,7 @@ These steps configure the `TFT_eSPI` library specifically for the CYD display.
     * Example path: `C:\Users\{YourUsername}\Documents\Arduino\libraries\TFT_eSPI\`
 
 2.  **Copy `User_Setups` Files:**
-    * Copy the `Setup_CYD_2_4.h` and `Setup_CYD_2_8.h` files (provided with *this project* in a `User_Setups` folder or similar) into the `User_Setups` subfolder within your `TFT_eSPI` library.
+    * Copy the `Setup_CYD_24.h` and `Setup_CYD_28_1.h` and `Setup_CYD_28_2.h` files (provided with *this project* in a `User_Setups` folder or similar) into the `User_Setups` subfolder within your `TFT_eSPI` library.
     * Example path: `C:\Users\{YourUsername}\Documents\Arduino\libraries\TFT_eSPI\User_Setups\`
 
 ---
@@ -56,8 +56,9 @@ You need to configure the project for either a 2.4" or 2.8" screen by editing tw
 1.  **Edit `User_Setup_Select.h`** (in your `TFT_eSPI` library folder):
     * Ensure the following lines are set:
         ```cpp
-        #include <User_Setups/Setup_CYD_2_4.h> // Active
-        //#include <User_Setups/Setup_CYD_2_8.h> // Commented out
+        #include <User_Setups/Setup_CYD_24.h> // Active
+        //#include <User_Setups/Setup_CYD_28_1.h> // Commented out
+        //#include <User_Setups/Setup_CYD_28_2.h> // Commented out
         ```
 
 2.  **Edit `printpoop_app.ino`** (your main sketch file):
@@ -66,13 +67,14 @@ You need to configure the project for either a 2.4" or 2.8" screen by editing tw
         // #define USE_TFT_28 // Should be commented out for 2.4" screen
         ```
 
-### For a 2.8" Screen
+### For a 2.8" Screen Variant 1
 
 1.  **Edit `User_Setup_Select.h`** (in your `TFT_eSPI` library folder):
     * Ensure the following lines are set:
         ```cpp
-        //#include <User_Setups/Setup_CYD_2_4.h> // Commented out
-        #include <User_Setups/Setup_CYD_2_8.h> // Active
+        //#include <User_Setups/Setup_CYD_24.h> // Commented out
+        #include <User_Setups/Setup_CYD_28_1.h> // Active
+        //#include <User_Setups/Setup_CYD_28_2.h> // Commented out
         ```
 
 2.  **Edit `printpoop_app.ino`** (your main sketch file):
@@ -80,6 +82,22 @@ You need to configure the project for either a 2.4" or 2.8" screen by editing tw
         ```cpp
         #define USE_TFT_28 // Should be active for 2.8" screen
         ```
+
+### For a 2.8" Screen Variant 2 Randomnerd
+
+1.  **Edit `User_Setup_Select.h`** (in your `TFT_eSPI` library folder):
+    * Ensure the following lines are set:
+        ```cpp
+        //#include <User_Setups/Setup_CYD_24.h> // Commented out
+        //#include <User_Setups/Setup_CYD_28_1.h> // Active
+        #include <User_Setups/Setup_CYD_28_2.h> // Commented out
+        ```
+
+2.  **Edit `printpoop_app.ino`** (your main sketch file):
+    * Go to approximately line 25 and make sure the `USE_TFT_28` macro is defined (uncommented):
+        ```cpp
+        #define USE_TFT_28 // Should be active for 2.8" screen
+        ```        
 
 ---
 

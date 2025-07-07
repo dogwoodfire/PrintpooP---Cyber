@@ -25,8 +25,9 @@
 // Only ONE line below should be uncommented to define your setup.  Add extra lines and files as needed.
 
 //#include <User_Setup.h>           // Default setup is root library folder
-#include <User_Setups/Setup_CYD_2_4.h>
-//#include <User_Setups/Setup_CYD_2_8.h>   // Select a setup file from the User_Setups folder
+//#include <User_Setups/Setup_CYD_24.h>
+//#include <User_Setups/Setup_CYD_28_1.h>   // Select a setup file from the User_Setups folder
+#include <User_Setups/Setup_CYD_28_2.h>   // Variant2 in ramdomnerd
 
 //#include <User_Setups/Setup1_ILI9341.h>  // Setup file for ESP8266 configured for my ILI9341
 //#include <User_Setups/Setup2_ST7735.h>   // Setup file for ESP8266 configured for my ST7735

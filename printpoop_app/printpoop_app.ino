@@ -13,19 +13,27 @@
 //------ Use 2.4" or 2.8" ----------------
 /*
 # to use 2.4" screen -> Edit "User_Setup_Select.h"
-#include <User_Setups/Setup_CYD_2_4.h>
-//#include <User_Setups/Setup_CYD_2_8.h>
+#include <User_Setups/Setup_CYD_24.h>
+//#include <User_Setups/Setup_CYD_28_1.h>
+//#include <User_Setups/Setup_CYD_28_2.h>
 
-# to use 2.8" screen -> Edit "User_Setup_Select.h"
-//#include <User_Setups/Setup_CYD_2_4.h>
-#include <User_Setups/Setup_CYD_2_8.h>
+# to use 2.8" screen Variant 1 -> Edit "User_Setup_Select.h"
+//#include <User_Setups/Setup_CYD_24.h>
+#include <User_Setups/Setup_CYD_28_1.h>
+//#include <User_Setups/Setup_CYD_28_2.h>
+
+# to use 2.8" screen Variant 2 (Randomnerd) -> Edit "User_Setup_Select.h"
+//#include <User_Setups/Setup_CYD_24.h>
+//#include <User_Setups/Setup_CYD_28_1.h>
+#include <User_Setups/Setup_CYD_28_2.h>
+
 */
 #include <Arduino.h>
 //-------------------------------------------------------
 const String version = "1.4.6";
 const String compile_date = __DATE__ " - " __TIME__;
 
-//#define USE_TFT_28  //comment out this line to use CYD2.4"
+#define USE_TFT_28  //comment out this line to use CYD2.4"
 //-------------------------------------------------------
 
 extern "C" {
