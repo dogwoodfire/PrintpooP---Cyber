@@ -33,7 +33,7 @@
 const String version = "1.4.6";
 const String compile_date = __DATE__ " - " __TIME__;
 
-//#define USE_TFT_28  //comment out this line to use CYD2.4"
+#define USE_TFT_28  //comment out this line to use CYD2.4"
 //-------------------------------------------------------
 
 extern "C" {
