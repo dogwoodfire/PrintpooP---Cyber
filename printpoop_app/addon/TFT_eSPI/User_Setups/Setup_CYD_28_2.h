@@ -1,12 +1,12 @@
 /* FOR CYD Resistive touch 2.8" Variant 2
 https://randomnerdtutorials.com/esp32-cheap-yellow-display-cyd-pinout-esp32-2432s028r/
 */
-#define ILI9341_DRIVER    
+#define ILI9341_2_DRIVER   
 
 #define TFT_WIDTH  240
 #define TFT_HEIGHT 320  
 
-#define TFT_RGB_ORDER TFT_RGB //red green blue
+#define TFT_RGB_ORDER TFT_BGR //red green blue
 
 // TFT display pins
 #define TFT_BL   21            // LED back-light control pin
@@ -39,4 +39,10 @@ https://randomnerdtutorials.com/esp32-cheap-yellow-display-cyd-pinout-esp32-2432
 // Optional reduced SPI frequency for reading TFT
 #define SPI_READ_FREQUENCY  16000000  // 16 MHz is stable for most setups
 // The XPT2046 requires a lower SPI clock rate of 2.5MHz so we define that here:
- #define SPI_TOUCH_FREQUENCY  2500000  //2500000
+#define SPI_TOUCH_FREQUENCY  2500000  //2500000
+
+// If colours are inverted (white shows as black) then uncomment one of the next
+// 2 lines try both options, one of the options should correct the inversion.
+
+#define TFT_INVERSION_ON
+//#define TFT_INVERSION_OFF
